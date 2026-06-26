@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Georgiy — Junior Python Backend Developer specializing in Django, REST APIs, and backend architecture. Portfolio and resume.">
+  <meta name="keywords" content="Python, Django, Backend Developer, REST API, Junior Developer, Portfolio">
+  <meta name="author" content="Georgiy">
+  <meta property="og:title" content="Georgiy | Junior Python Backend Developer">
+  <meta property="og:description" content="Junior Python Backend Developer building Django applications, REST APIs, and practical backend projects.">
+  <meta property="og:type" content="website">
+  <title>George | Junior Python Backend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background decoration -->
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="nav__logo">
+        <span class="nav__logo-bracket">&lt;</span>G<span class="nav__logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#home" class="nav__link active">Home</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#education" class="nav__link">Education</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero section" id="home">
+      <div class="container hero__container">
+        <div class="hero__content reveal">
+          <p class="hero__greeting">Hello, I'm</p>
+          <h1 class="hero__name">George</h1>
+          <p class="hero__title">
+            <span id="typing-text"></span><span class="typing-cursor" aria-hidden="true">|</span>
+          </p>
+          <p class="hero__description">
+            I am a Junior Python Backend Developer currently studying at Yandex Practicum. I enjoy building backend applications with Python and Django, continuously improving my programming skills, and working on practical projects.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="#contact" class="btn btn--outline">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero__visual reveal reveal-delay-1" aria-hidden="true">
+          <div class="hero__card glass">
+            <div class="hero__code">
+              <div class="hero__code-header">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+                <span class="hero__code-filename">developer.py</span>
+              </div>
+              <pre class="hero__code-body"><code><span class="code-keyword">class</span> <span class="code-class">Developer</span>:
+    name = <span class="code-string">"George"</span>
+    role = <span class="code-string">"Backend Developer"</span>
+    stack = [<span class="code-string">"Python"</span>, <span class="code-string">"Django"</span>, <span class="code-string">"REST API"</span>]
+
+    <span class="code-keyword">def</span> <span class="code-func">build</span>(self, project):
+        <span class="code-keyword">return</span> project.ship()</code></pre>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
+        <span class="hero__scroll-text">Scroll</span>
+        <span class="hero__scroll-icon"></span>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">About Me</span>
+          <h2 class="section__title">Building Backend Solutions</h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__text glass reveal">
+            <p>
+              I am a Junior Python Backend Developer on an active learning journey at Yandex Practicum. My focus is on building reliable backend applications with Python and Django, working with REST APIs, databases, and clean software architecture.
+            </p>
+            <p>
+              Rather than waiting for the perfect opportunity, I invest my time in practical projects — from educational Django applications to personal tools that solve real problems. I work with Git daily, write structured code, and continuously refine my understanding of backend development best practices.
+            </p>
+            <p>
+              I have a strong interest in cryptocurrency technologies and am currently developing my own project called <strong>Riskguard</strong>. This personal initiative reflects my curiosity about fintech and my desire to apply backend skills to domains I genuinely care about.
+            </p>
+          </div>
+          <div class="about__highlights reveal reveal-delay-1">
+            <div class="about__highlight glass">
+              <div class="about__highlight-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <h3>Backend Focus</h3>
+              <p>Python, Django, REST APIs, and database design</p>
+            </div>
+            <div class="about__highlight glass">
+              <div class="about__highlight-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              </div>
+              <h3>Active Learner</h3>
+              <p>Currently studying at Yandex Practicum</p>
+            </div>
+            <div class="about__highlight glass">
+              <div class="about__highlight-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+              </div>
+              <h3>Project-Driven</h3>
+              <p>Building real applications to grow my skills</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Skills</span>
+          <h2 class="section__title">Technologies I Work With</h2>
+        </div>
+        <div class="skills__grid">
+          <div class="skills__category glass reveal">
+            <div class="skills__category-header">
+              <div class="skills__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"/></svg>
+              </div>
+              <h3>Backend</h3>
+            </div>
+            <ul class="skills__list">
+              <li class="skill-tag">Python</li>
+              <li class="skill-tag">Django</li>
+              <li class="skill-tag">Django ORM</li>
+              <li class="skill-tag">REST API</li>
+              <li class="skill-tag">SQLite</li>
+            </ul>
+          </div>
+          <div class="skills__category glass reveal reveal-delay-1">
+            <div class="skills__category-header">
+              <div class="skills__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+              </div>
+              <h3>Frontend (Basic)</h3>
+            </div>
+            <ul class="skills__list">
+              <li class="skill-tag">HTML</li>
+              <li class="skill-tag">CSS</li>
+            </ul>
+          </div>
+          <div class="skills__category glass reveal reveal-delay-2">
+            <div class="skills__category-header">
+              <div class="skills__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
+              </div>
+              <h3>Tools</h3>
+            </div>
+            <ul class="skills__list">
+              <li class="skill-tag">Git</li>
+              <li class="skill-tag">GitHub</li>
+              <li class="skill-tag">VS Code</li>
+              <li class="skill-tag">Cursor</li>
+              <li class="skill-tag">PyCharm</li>
+              <li class="skill-tag">Postman</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Education</span>
+          <h2 class="section__title">Learning &amp; Growth</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline__item glass reveal">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <span class="timeline__badge">Currently Studying</span>
+              <h3 class="timeline__title">Python Backend Developer Program</h3>
+              <p class="timeline__org">Yandex Practicum</p>
+              <p class="timeline__description">
+                An intensive backend development program focused on Python, Django, REST APIs, databases, testing, and professional development workflows. I am actively completing coursework and building projects that reinforce core backend concepts.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Experience</span>
+          <h2 class="section__title">Personal Projects</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline__item glass reveal">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <span class="timeline__period">2025 – Present</span>
+              <h3 class="timeline__title">Junior Python Backend Developer</h3>
+              <p class="timeline__org">Personal &amp; Educational Projects</p>
+              <p class="timeline__description">
+                Developing personal and educational backend projects using Python and Django while continuously improving programming skills, working with Git, REST APIs, databases, and modern backend development practices.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Projects</span>
+          <h2 class="section__title">Featured Work</h2>
+        </div>
+        <div class="projects__grid">
+
+          <article class="project-card glass reveal">
+            <div class="project-card__image">
+              <div class="project-card__placeholder project-card__placeholder--crypto">
+                <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                  <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                  <path d="M32 12v40M22 22h16a8 8 0 010 16H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="project-card__status">Active Development</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Crypto Portfolio Tracker</h3>
+              <p class="project-card__description">
+                A full-stack cryptocurrency portfolio tracker built with Django REST Framework. The backend integrates real-time market data, provides portfolio analytics, and follows a scalable architecture designed for growth. This project is currently under active development as part of my ongoing work in the crypto/fintech space.
+              </p>
+              <div class="project-card__tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">Django REST Framework</span>
+                <span class="tech-tag">REST API</span>
+                <span class="tech-tag">SQLite</span>
+              </div>
+              <a href="https://github.com/George0-00/crypto-portfolio-tracker" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal reveal-delay-1">
+            <div class="project-card__image">
+              <div class="project-card__placeholder project-card__placeholder--blog">
+                <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                  <rect x="10" y="8" width="44" height="48" rx="4" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                  <line x1="18" y1="20" x2="46" y2="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                  <line x1="18" y1="30" x2="40" y2="30" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                  <line x1="18" y1="38" x2="36" y2="38" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+                </svg>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Blogicum</h3>
+              <p class="project-card__description">
+                My first Django project — a full-featured blog platform with user profiles, content management, and a comment system. Includes author pages with paginated posts, draft support, category and location tagging, and CRUD operations for comments protected via class-based views. Optimized with <code>select_related</code> to prevent N+1 query issues.
+              </p>
+              <div class="project-card__tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Django 4.2</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">CBV</span>
+                <span class="tech-tag">Pytest</span>
+              </div>
+              <a href="https://github.com/George0-00/blogicum" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__tag">Contact</span>
+          <h2 class="section__title">Let's Connect</h2>
+          <p class="section__subtitle">Open to junior backend developer opportunities and collaboration on interesting projects.</p>
+        </div>
+        <div class="contact__grid">
+          <a href="mailto:kuzzz.geo@gmail.com" class="contact__card glass reveal">
+            <div class="contact__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <h3>Email</h3>
+            <p>kuzzz.geo@gmail.com</p>
+          </a>
+          <a href="https://github.com/George0-00" class="contact__card glass reveal reveal-delay-1" target="_blank" rel="noopener noreferrer">
+            <div class="contact__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </div>
+            <h3>GitHub</h3>
+            <p>George0-00</p>
+          </a>
+          <a href="https://t.me/yourpuppet666" class="contact__card glass reveal reveal-delay-2" target="_blank" rel="noopener noreferrer">
+            <div class="contact__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            </div>
+            <h3>Telegram</h3>
+            <p>@yourpuppet666</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; 2025 Georgiy. Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
