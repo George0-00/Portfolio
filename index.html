@@ -1,31 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Georgiy — Junior Python Backend Developer specializing in Django, REST APIs, and backend architecture. Portfolio and resume.">
-  <meta name="keywords" content="Python, Django, Backend Developer, REST API, Junior Developer, Portfolio">
-  <meta name="author" content="Georgiy">
-  <meta property="og:title" content="Georgiy | Junior Python Backend Developer">
-  <meta property="og:description" content="Junior Python Backend Developer building Django applications, REST APIs, and practical backend projects.">
+  <meta name="description" content="Georgiy Kuzminov — Backend Developer specializing in Django, REST APIs, and practical backend projects.">
+  <meta name="keywords" content="Python, Django, Backend Developer, REST API, Portfolio, Georgiy Kuzminov">
+  <meta name="author" content="Georgiy Kuzminov">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://george0-00.github.io/Portfolio/">
+
+  <meta property="og:title" content="George | Backend Developer">
+  <meta property="og:description" content="Backend Developer building Django applications, REST APIs, and practical backend projects.">
   <meta property="og:type" content="website">
-  <title>George | Junior Python Backend Developer</title>
+  <meta property="og:url" content="https://george0-00.github.io/Portfolio/">
+  <meta property="og:image" content="https://george0-00.github.io/Portfolio/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="George | Backend Developer">
+  <meta name="twitter:description" content="Backend Developer building Django applications, REST APIs, and practical backend projects.">
+  <meta name="twitter:image" content="https://george0-00.github.io/Portfolio/assets/og-image.jpg">
+
+  <title>George | Backend Developer</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Background decoration -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
   <div class="bg-gradient" aria-hidden="true"></div>
-  <div class="bg-orbs" aria-hidden="true">
-    <span class="orb orb-1"></span>
-    <span class="orb orb-2"></span>
-    <span class="orb orb-3"></span>
-  </div>
+  <div class="bg-grid" aria-hidden="true"></div>
 
-  <!-- Navigation -->
   <header class="header" id="header">
     <nav class="nav container" aria-label="Main navigation">
       <a href="#home" class="nav__logo">
@@ -33,40 +41,50 @@
       </a>
 
       <ul class="nav__menu" id="nav-menu">
-        <li><a href="#home" class="nav__link active">Home</a></li>
-        <li><a href="#about" class="nav__link">About</a></li>
-        <li><a href="#skills" class="nav__link">Skills</a></li>
-        <li><a href="#education" class="nav__link">Education</a></li>
-        <li><a href="#experience" class="nav__link">Experience</a></li>
-        <li><a href="#projects" class="nav__link">Projects</a></li>
-        <li><a href="#contact" class="nav__link">Contact</a></li>
+        <li><a href="#home" class="nav__link active" data-i18n="nav.home">Home</a></li>
+        <li><a href="#about" class="nav__link" data-i18n="nav.about">About</a></li>
+        <li><a href="#skills" class="nav__link" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#background" class="nav__link" data-i18n="nav.background">Background</a></li>
+        <li><a href="#projects" class="nav__link" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a></li>
       </ul>
 
-      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-      </button>
+      <div class="nav__controls">
+        <button class="nav__chip" id="lang-toggle" type="button" aria-label="Switch language">EN</button>
+        <button class="nav__chip" id="theme-toggle" type="button" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 14.5A8.5 8.5 0 1110.5 3a7 7 0 0010.5 11.5z"/></svg>
+        </button>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
     </nav>
   </header>
 
   <main>
 
-    <!-- Hero -->
     <section class="hero section" id="home">
       <div class="container hero__container">
         <div class="hero__content reveal">
-          <p class="hero__greeting">Hello, I'm</p>
+          <div class="hero__badges">
+            <span class="status-badge" data-i18n="hero.open">Open to work</span>
+            <span class="meta-badge" data-i18n="hero.updated">Updated Jul 2026</span>
+          </div>
+          <p class="hero__greeting" data-i18n="hero.greeting">Hello, I'm</p>
           <h1 class="hero__name">George</h1>
           <p class="hero__title">
             <span id="typing-text"></span><span class="typing-cursor" aria-hidden="true">|</span>
           </p>
-          <p class="hero__description">
-            I am a Junior Python Backend Developer currently studying at Yandex Practicum. I enjoy building backend applications with Python and Django, continuously improving my programming skills, and working on practical projects.
+          <p class="hero__description" data-i18n="hero.description">
+            I am a Backend Developer currently studying at Yandex Practicum. I enjoy building backend applications with Python and Django, continuously improving my programming skills, and working on practical projects.
           </p>
           <div class="hero__actions">
-            <a href="#projects" class="btn btn--primary">View Projects</a>
-            <a href="#contact" class="btn btn--outline">Get in Touch</a>
+            <a href="#projects" class="btn btn--primary" data-i18n="hero.ctaProjects">View Projects</a>
+            <a href="assets/Georgiy_Kuzminov_CV.pdf" class="btn btn--outline" download data-i18n="hero.ctaCv">Download CV</a>
+            <a href="#contact" class="btn btn--ghost" data-i18n="hero.ctaContact">Get in Touch</a>
           </div>
         </div>
         <div class="hero__visual reveal reveal-delay-1" aria-hidden="true">
@@ -85,67 +103,57 @@
 
     <span class="code-keyword">def</span> <span class="code-func">build</span>(self, project):
         <span class="code-keyword">return</span> project.ship()</code></pre>
+            </div>
           </div>
         </div>
       </div>
       <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
-        <span class="hero__scroll-text">Scroll</span>
+        <span class="hero__scroll-text" data-i18n="hero.scroll">Scroll</span>
         <span class="hero__scroll-icon"></span>
       </a>
     </section>
 
-    <!-- About -->
     <section class="section" id="about">
       <div class="container">
         <div class="section__header reveal">
-          <span class="section__tag">About Me</span>
-          <h2 class="section__title">Building Backend Solutions</h2>
+          <span class="section__tag" data-i18n="about.tag">About Me</span>
+          <h2 class="section__title" data-i18n="about.title">Building Backend Solutions</h2>
         </div>
-        <div class="about__grid">
-          <div class="about__text glass reveal">
-            <p>
-              I am a Junior Python Backend Developer on an active learning journey at Yandex Practicum. My focus is on building reliable backend applications with Python and Django, working with REST APIs, databases, and clean software architecture.
+        <div class="about__panel glass reveal">
+          <div class="about__text">
+            <p data-i18n="about.p1">
+              I am a Backend Developer focused on building reliable applications with Python and Django. My day-to-day work centers on REST APIs, database design, and clean, maintainable architecture — the kind of foundation that lets products grow without becoming fragile.
             </p>
-            <p>
-              Rather than waiting for the perfect opportunity, I invest my time in practical projects — from educational Django applications to personal tools that solve real problems. I work with Git daily, write structured code, and continuously refine my understanding of backend development best practices.
+            <p data-i18n="about.p2">
+              I am currently studying at Yandex Practicum on the Python Backend Developer track, and I treat learning as something that has to show up in code. Alongside coursework, I build personal and educational projects end to end: structuring apps, modeling data, wiring APIs, working with Git daily, and refining habits around testing, readability, and review.
             </p>
-            <p>
-              I have a strong interest in cryptocurrency and fintech. Alongside backend coursework, I am building a modular <strong>Paper Trading Bot</strong> in Python — market data, strategy signals, risk rules, and paper execution — to apply backend skills to a domain I genuinely care about.
+            <p data-i18n="about.p3">
+              I care about practical problem-solving more than buzzwords — clear interfaces, thoughtful data flow, and code that other people can understand. I am especially interested in backend services and product domains where reliability and careful system design matter, and I am looking for a team where I can keep growing as a developer while shipping real features.
             </p>
           </div>
-          <div class="about__highlights reveal reveal-delay-1">
-            <div class="about__highlight glass">
-              <div class="about__highlight-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-              </div>
-              <h3>Backend Focus</h3>
-              <p>Python, Django, REST APIs, and database design</p>
+          <dl class="about__prefs">
+            <div>
+              <dt data-i18n="looking.roleLabel">Role</dt>
+              <dd data-i18n="looking.role">Backend Developer</dd>
             </div>
-            <div class="about__highlight glass">
-              <div class="about__highlight-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-              </div>
-              <h3>Active Learner</h3>
-              <p>Currently studying at Yandex Practicum</p>
+            <div>
+              <dt data-i18n="looking.formatLabel">Format</dt>
+              <dd data-i18n="looking.format">Remote or hybrid · open to relocation</dd>
             </div>
-            <div class="about__highlight glass">
-              <div class="about__highlight-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-              </div>
-              <h3>Project-Driven</h3>
-              <p>Building real applications to grow my skills</p>
+            <div>
+              <dt data-i18n="looking.focusLabel">Focus</dt>
+              <dd data-i18n="looking.focus">Backend services, APIs, and product-oriented systems</dd>
             </div>
-          </div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
     <section class="section section--alt" id="skills">
       <div class="container">
         <div class="section__header reveal">
-          <span class="section__tag">Skills</span>
-          <h2 class="section__title">Technologies I Work With</h2>
+          <span class="section__tag" data-i18n="skills.tag">Skills</span>
+          <h2 class="section__title" data-i18n="skills.title">Technologies I Work With</h2>
         </div>
         <div class="skills__grid">
           <div class="skills__category glass reveal">
@@ -153,7 +161,7 @@
               <div class="skills__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"/></svg>
               </div>
-              <h3>Backend</h3>
+              <h3 data-i18n="skills.backend">Backend</h3>
             </div>
             <ul class="skills__list">
               <li class="skill-tag">Python</li>
@@ -161,6 +169,8 @@
               <li class="skill-tag">Django ORM</li>
               <li class="skill-tag">REST API</li>
               <li class="skill-tag">SQLite</li>
+              <li class="skill-tag">PostgreSQL</li>
+              <li class="skill-tag">ccxt</li>
             </ul>
           </div>
           <div class="skills__category glass reveal reveal-delay-1">
@@ -168,11 +178,12 @@
               <div class="skills__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
               </div>
-              <h3>Frontend (Basic)</h3>
+              <h3 data-i18n="skills.frontend">Frontend (Basic)</h3>
             </div>
             <ul class="skills__list">
               <li class="skill-tag">HTML</li>
               <li class="skill-tag">CSS</li>
+              <li class="skill-tag">JavaScript</li>
             </ul>
           </div>
           <div class="skills__category glass reveal reveal-delay-2">
@@ -180,11 +191,12 @@
               <div class="skills__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
               </div>
-              <h3>Tools</h3>
+              <h3 data-i18n="skills.tools">Tools</h3>
             </div>
             <ul class="skills__list">
               <li class="skill-tag">Git</li>
               <li class="skill-tag">GitHub</li>
+              <li class="skill-tag">Docker</li>
               <li class="skill-tag">VS Code</li>
               <li class="skill-tag">Cursor</li>
               <li class="skill-tag">PyCharm</li>
@@ -195,45 +207,40 @@
       </div>
     </section>
 
-    <!-- Education -->
-    <section class="section" id="education">
+    <section class="section" id="background">
       <div class="container">
         <div class="section__header reveal">
-          <span class="section__tag">Education</span>
-          <h2 class="section__title">Learning &amp; Growth</h2>
+          <span class="section__tag" data-i18n="background.tag">Background</span>
+          <h2 class="section__title" data-i18n="background.title">Education &amp; Practice</h2>
         </div>
         <div class="timeline">
           <article class="timeline__item glass reveal">
             <div class="timeline__marker" aria-hidden="true"></div>
             <div class="timeline__content">
-              <span class="timeline__badge">Currently Studying</span>
-              <h3 class="timeline__title">Python Backend Developer Program</h3>
-              <p class="timeline__org">Yandex Practicum</p>
-              <p class="timeline__description">
-                An intensive backend development program focused on Python, Django, REST APIs, databases, testing, and professional development workflows. I am actively completing coursework and building projects that reinforce core backend concepts.
+              <span class="timeline__badge" data-i18n="education.badge">Currently Studying</span>
+              <h3 class="timeline__title" data-i18n="education.program">Python Backend Developer Program</h3>
+              <p class="timeline__org" data-i18n="education.org">Yandex Practicum</p>
+              <p class="timeline__description" data-i18n="education.desc">
+                Backend development program covering Python, Django, REST APIs, databases, testing, and professional workflows — reinforced by hands-on coursework projects.
               </p>
+              <ul class="education__modules">
+                <li data-i18n="education.m1">Python fundamentals &amp; OOP</li>
+                <li data-i18n="education.m2">Django &amp; Django ORM</li>
+                <li data-i18n="education.m3">REST APIs &amp; serializers</li>
+                <li data-i18n="education.m4">Databases &amp; query optimization</li>
+                <li data-i18n="education.m5">Testing (pytest) &amp; Git workflows</li>
+                <li data-i18n="education.m6">Project structure &amp; code review habits</li>
+              </ul>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section class="section section--alt" id="experience">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__tag">Experience</span>
-          <h2 class="section__title">Personal Projects</h2>
-        </div>
-        <div class="timeline">
-          <article class="timeline__item glass reveal">
+          <article class="timeline__item glass reveal reveal-delay-1">
             <div class="timeline__marker" aria-hidden="true"></div>
             <div class="timeline__content">
               <span class="timeline__period">2025 – Present</span>
-              <h3 class="timeline__title">Junior Python Backend Developer</h3>
-              <p class="timeline__org">Personal &amp; Educational Projects</p>
-              <p class="timeline__description">
-                Developing personal and educational backend projects using Python and Django while continuously improving programming skills, working with Git, REST APIs, databases, and modern backend development practices.
+              <h3 class="timeline__title" data-i18n="experience.role">Backend Developer</h3>
+              <p class="timeline__org" data-i18n="experience.org">Personal &amp; Educational Projects</p>
+              <p class="timeline__description" data-i18n="experience.desc">
+                Building personal and educational backend projects with Python and Django — REST APIs, databases, Git, and modern backend practices. Details below in Featured Work.
               </p>
             </div>
           </article>
@@ -241,31 +248,44 @@
       </div>
     </section>
 
-    <!-- Projects -->
-    <section class="section" id="projects">
+    <section class="section section--alt" id="projects">
       <div class="container">
         <div class="section__header reveal">
-          <span class="section__tag">Projects</span>
-          <h2 class="section__title">Featured Work</h2>
+          <span class="section__tag" data-i18n="projects.tag">Projects</span>
+          <h2 class="section__title" data-i18n="projects.title">Featured Work</h2>
         </div>
         <div class="projects__grid">
 
           <article class="project-card glass reveal">
             <div class="project-card__image">
-              <div class="project-card__placeholder project-card__placeholder--trading">
-                <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                  <path d="M8 44l12-14 10 8 18-24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <circle cx="48" cy="14" r="3" fill="currentColor"/>
-                  <path d="M10 52h44" stroke="currentColor" stroke-width="2" opacity="0.35" stroke-linecap="round"/>
-                </svg>
+              <div class="project-preview project-preview--trading" aria-hidden="true">
+                <div class="project-preview__bar">
+                  <span></span><span></span><span></span>
+                  <em>bot.log</em>
+                </div>
+                <div class="project-preview__body">
+                  <div class="chart">
+                    <svg viewBox="0 0 200 80" preserveAspectRatio="none"><path d="M0 55 L25 48 L50 52 L75 30 L100 36 L125 18 L150 28 L175 12 L200 20" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                  </div>
+                  <div class="preview-lines">
+                    <span class="ok">BUY DOGE/USDT @ 0.142</span>
+                    <span>SL −2% · TP +3% · size 10%</span>
+                    <span class="ok">EMA 9 crossed above EMA 21</span>
+                  </div>
+                </div>
               </div>
-              <span class="project-card__status">Active Development</span>
+              <span class="project-card__status" data-i18n="projects.active">Active Development</span>
             </div>
             <div class="project-card__body">
               <h3 class="project-card__title">Paper Trading Bot</h3>
-              <p class="project-card__description">
-                An educational crypto trading bot built from scratch in Python — modular pipeline from market data to signals, risk rules, and paper execution. Uses an EMA crossover strategy with position sizing, stop-loss, and take-profit. Fetches live OHLCV candles via ccxt (Binance) and logs simulated trades; no real orders are sent.
+              <p class="project-card__description" data-i18n="projects.trading.desc">
+                Educational crypto trading bot in Python — modular pipeline from market data to signals, risk rules, and paper execution.
               </p>
+              <ul class="project-card__bullets">
+                <li data-i18n="projects.trading.b1">Built modular architecture: config → data → strategy → risk → broker → logs</li>
+                <li data-i18n="projects.trading.b2">EMA crossover strategy with position sizing, stop-loss, and take-profit</li>
+                <li data-i18n="projects.trading.b3">Live OHLCV via ccxt (Binance); paper mode only — no real orders</li>
+              </ul>
               <div class="project-card__tech">
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">ccxt</span>
@@ -273,58 +293,85 @@
                 <span class="tech-tag">Risk Management</span>
                 <span class="tech-tag">Paper Trading</span>
               </div>
-              <a href="https://github.com/George0-00/trading_bot" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                View on GitHub
-              </a>
+              <div class="project-card__actions">
+                <a href="https://github.com/George0-00/trading_bot" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span data-i18n="projects.github">View on GitHub</span>
+                </a>
+              </div>
             </div>
           </article>
 
           <article class="project-card glass reveal reveal-delay-1">
             <div class="project-card__image">
-              <div class="project-card__placeholder project-card__placeholder--crypto">
-                <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                  <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2" opacity="0.3"/>
-                  <path d="M32 12v40M22 22h16a8 8 0 010 16H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                </svg>
+              <div class="project-preview project-preview--crypto" aria-hidden="true">
+                <div class="project-preview__bar">
+                  <span></span><span></span><span></span>
+                  <em>portfolio API</em>
+                </div>
+                <div class="project-preview__body preview-cards">
+                  <div class="mini-card"><strong>BTC</strong><em>+2.4%</em></div>
+                  <div class="mini-card"><strong>ETH</strong><em>+1.1%</em></div>
+                  <div class="mini-card"><strong>SOL</strong><em>−0.6%</em></div>
+                </div>
               </div>
-              <span class="project-card__status">Active Development</span>
+              <span class="project-card__status" data-i18n="projects.active">Active Development</span>
             </div>
             <div class="project-card__body">
               <h3 class="project-card__title">Crypto Portfolio Tracker</h3>
-              <p class="project-card__description">
-                A full-stack cryptocurrency portfolio tracker built with Django REST Framework. The backend integrates real-time market data, provides portfolio analytics, and follows a scalable architecture designed for growth. This project is currently under active development as part of my ongoing work in the crypto/fintech space.
+              <p class="project-card__description" data-i18n="projects.crypto.desc">
+                Full-stack cryptocurrency portfolio tracker with Django REST Framework, market data, and portfolio analytics.
               </p>
+              <ul class="project-card__bullets">
+                <li data-i18n="projects.crypto.b1">Designed REST API for assets, transactions, and portfolio analytics</li>
+                <li data-i18n="projects.crypto.b2">Integrated market data flow and Docker-based local stack</li>
+                <li data-i18n="projects.crypto.b3">Structured Django apps for scalable backend growth</li>
+              </ul>
               <div class="project-card__tech">
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Django</span>
                 <span class="tech-tag">Django REST Framework</span>
                 <span class="tech-tag">REST API</span>
-                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">Docker</span>
               </div>
-              <a href="https://github.com/George0-00/crypto-portfolio-tracker" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                View on GitHub
-              </a>
+              <div class="project-card__actions">
+                <a href="https://github.com/George0-00/crypto-portfolio-tracker" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span data-i18n="projects.github">View on GitHub</span>
+                </a>
+              </div>
             </div>
           </article>
 
           <article class="project-card glass reveal reveal-delay-2">
             <div class="project-card__image">
-              <div class="project-card__placeholder project-card__placeholder--blog">
-                <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                  <rect x="10" y="8" width="44" height="48" rx="4" stroke="currentColor" stroke-width="2" opacity="0.3"/>
-                  <line x1="18" y1="20" x2="46" y2="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                  <line x1="18" y1="30" x2="40" y2="30" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-                  <line x1="18" y1="38" x2="36" y2="38" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
-                </svg>
+              <div class="project-preview project-preview--blog" aria-hidden="true">
+                <div class="project-preview__bar">
+                  <span></span><span></span><span></span>
+                  <em>blogicum</em>
+                </div>
+                <div class="project-preview__body blog-mock">
+                  <div class="blog-mock__title">How I built my first Django blog</div>
+                  <div class="blog-mock__meta">George · 12 comments · Draft</div>
+                  <div class="blog-mock__rows">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="blog-mock__tags">
+                    <em>Django</em><em>CBV</em><em>ORM</em>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="project-card__body">
               <h3 class="project-card__title">Blogicum</h3>
-              <p class="project-card__description">
-                My first Django project — a full-featured blog platform with user profiles, content management, and a comment system. Includes author pages with paginated posts, draft support, category and location tagging, and CRUD operations for comments protected via class-based views. Optimized with <code>select_related</code> to prevent N+1 query issues.
+              <p class="project-card__description" data-i18n="projects.blog.desc">
+                First Django project — blog platform with profiles, drafts, categories, and a protected comment system.
               </p>
+              <ul class="project-card__bullets">
+                <li data-i18n="projects.blog.b1">Implemented CBV-based CRUD for posts and comments</li>
+                <li data-i18n="projects.blog.b2">Added drafts, categories, locations, and author pages with pagination</li>
+                <li data-i18n="projects.blog.b3">Optimized queries with select_related to avoid N+1 issues</li>
+              </ul>
               <div class="project-card__tech">
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Django 4.2</span>
@@ -332,10 +379,12 @@
                 <span class="tech-tag">CBV</span>
                 <span class="tech-tag">Pytest</span>
               </div>
-              <a href="https://github.com/George0-00/blogicum" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                View on GitHub
-              </a>
+              <div class="project-card__actions">
+                <a href="https://github.com/George0-00/blogicum" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span data-i18n="projects.github">View on GitHub</span>
+                </a>
+              </div>
             </div>
           </article>
 
@@ -343,50 +392,80 @@
       </div>
     </section>
 
-    <!-- Contact -->
-    <section class="section section--alt" id="contact">
+    <section class="section" id="contact">
       <div class="container">
         <div class="section__header reveal">
-          <span class="section__tag">Contact</span>
-          <h2 class="section__title">Let's Connect</h2>
-          <p class="section__subtitle">Open to junior backend developer opportunities and collaboration on interesting projects.</p>
+          <span class="section__tag" data-i18n="contact.tag">Contact</span>
+          <h2 class="section__title" data-i18n="contact.title">Let's Connect</h2>
+          <p class="section__subtitle" data-i18n="contact.subtitle">Open to backend developer opportunities and collaboration on interesting projects.</p>
         </div>
-        <div class="contact__grid">
-          <a href="mailto:kuzzz.geo@gmail.com" class="contact__card glass reveal">
-            <div class="contact__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            </div>
-            <h3>Email</h3>
-            <p>kuzzz.geo@gmail.com</p>
-          </a>
-          <a href="https://github.com/George0-00" class="contact__card glass reveal reveal-delay-1" target="_blank" rel="noopener noreferrer">
-            <div class="contact__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            </div>
-            <h3>GitHub</h3>
-            <p>George0-00</p>
-          </a>
-          <a href="https://t.me/yourpuppet666" class="contact__card glass reveal reveal-delay-2" target="_blank" rel="noopener noreferrer">
-            <div class="contact__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-            </div>
-            <h3>Telegram</h3>
-            <p>@yourpuppet666</p>
-          </a>
+
+        <div class="contact__layout">
+          <div class="contact__grid">
+            <a href="mailto:kuzzz.geo@gmail.com" class="contact__card glass reveal">
+              <div class="contact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <h3 data-i18n="contact.email">Email</h3>
+              <p>kuzzz.geo@gmail.com</p>
+            </a>
+            <a href="https://github.com/George0-00" class="contact__card glass reveal reveal-delay-1" target="_blank" rel="noopener noreferrer">
+              <div class="contact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <h3>GitHub</h3>
+              <p>George0-00</p>
+            </a>
+            <a href="https://www.linkedin.com/in/george-kuzminov-a36bb3404/" class="contact__card glass reveal reveal-delay-1" target="_blank" rel="noopener noreferrer">
+              <div class="contact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <h3>LinkedIn</h3>
+              <p>george-kuzminov</p>
+            </a>
+            <a href="https://t.me/yourpuppet666" class="contact__card glass reveal reveal-delay-2" target="_blank" rel="noopener noreferrer">
+              <div class="contact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              </div>
+              <h3>Telegram</h3>
+              <p>@yourpuppet666</p>
+            </a>
+          </div>
+
+          <form class="contact__form glass reveal" id="contact-form" action="https://formsubmit.co/kuzzz.geo@gmail.com" method="POST">
+            <h3 data-i18n="contact.formTitle">Send a message</h3>
+            <input type="hidden" name="_subject" value="Portfolio contact — George">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <label>
+              <span data-i18n="contact.name">Name</span>
+              <input type="text" name="name" required autocomplete="name" data-i18n-placeholder="contact.namePh" placeholder="Your name">
+            </label>
+            <label>
+              <span data-i18n="contact.emailLabel">Email</span>
+              <input type="email" name="email" required autocomplete="email" data-i18n-placeholder="contact.emailPh" placeholder="you@example.com">
+            </label>
+            <label>
+              <span data-i18n="contact.message">Message</span>
+              <textarea name="message" rows="5" required data-i18n-placeholder="contact.messagePh" placeholder="Tell me about the role or idea..."></textarea>
+            </label>
+            <button type="submit" class="btn btn--primary" data-i18n="contact.send">Send message</button>
+            <p class="contact__form-note" data-i18n="contact.formNote">Or write directly to kuzzz.geo@gmail.com / Telegram.</p>
+          </form>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p>&copy; 2026 Georgiy. Built with HTML, CSS &amp; JavaScript.</p>
+      <p data-i18n="footer.copy">&copy; 2026 Georgiy. Built with HTML, CSS &amp; JavaScript.</p>
+      <p class="footer__meta" data-i18n="footer.updated">Last updated: July 2026</p>
     </div>
   </footer>
 
-  <!-- Scroll to top -->
   <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
   </button>
