@@ -110,7 +110,7 @@
               Rather than waiting for the perfect opportunity, I invest my time in practical projects — from educational Django applications to personal tools that solve real problems. I work with Git daily, write structured code, and continuously refine my understanding of backend development best practices.
             </p>
             <p>
-              I have a strong interest in cryptocurrency technologies and am currently developing my own project called <strong>Riskguard</strong>. This personal initiative reflects my curiosity about fintech and my desire to apply backend skills to domains I genuinely care about.
+              I have a strong interest in cryptocurrency and fintech. Alongside backend coursework, I am building a modular <strong>Paper Trading Bot</strong> in Python — market data, strategy signals, risk rules, and paper execution — to apply backend skills to a domain I genuinely care about.
             </p>
           </div>
           <div class="about__highlights reveal reveal-delay-1">
@@ -252,6 +252,36 @@
 
           <article class="project-card glass reveal">
             <div class="project-card__image">
+              <div class="project-card__placeholder project-card__placeholder--trading">
+                <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                  <path d="M8 44l12-14 10 8 18-24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="48" cy="14" r="3" fill="currentColor"/>
+                  <path d="M10 52h44" stroke="currentColor" stroke-width="2" opacity="0.35" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="project-card__status">Active Development</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Paper Trading Bot</h3>
+              <p class="project-card__description">
+                An educational crypto trading bot built from scratch in Python — modular pipeline from market data to signals, risk rules, and paper execution. Uses an EMA crossover strategy with position sizing, stop-loss, and take-profit. Fetches live OHLCV candles via ccxt (Binance) and logs simulated trades; no real orders are sent.
+              </p>
+              <div class="project-card__tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">ccxt</span>
+                <span class="tech-tag">EMA Strategy</span>
+                <span class="tech-tag">Risk Management</span>
+                <span class="tech-tag">Paper Trading</span>
+              </div>
+              <a href="https://github.com/George0-00/trading_bot" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal reveal-delay-1">
+            <div class="project-card__image">
               <div class="project-card__placeholder project-card__placeholder--crypto">
                 <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
                   <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2" opacity="0.3"/>
@@ -279,7 +309,7 @@
             </div>
           </article>
 
-          <article class="project-card glass reveal reveal-delay-1">
+          <article class="project-card glass reveal reveal-delay-2">
             <div class="project-card__image">
               <div class="project-card__placeholder project-card__placeholder--blog">
                 <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
@@ -352,7 +382,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p>&copy; 2025 Georgiy. Built with HTML, CSS &amp; JavaScript.</p>
+      <p>&copy; 2026 Georgiy. Built with HTML, CSS &amp; JavaScript.</p>
     </div>
   </footer>
 
