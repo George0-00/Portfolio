@@ -58,6 +58,11 @@
       'projects.title': 'Featured Work',
       'projects.active': 'Active Development',
       'projects.github': 'View on GitHub',
+      'projects.steam.desc':
+        'Telegram bot for automated Steam balance top-ups — Platega.io payments, webhook processing, admin panel, and idempotent order flow.',
+      'projects.steam.b1': 'Built end-to-end flow: user onboarding → payment → webhook/polling → Steam API top-up',
+      'projects.steam.b2': 'Admin panel in Telegram: orders, commission limits, stats, broadcasts',
+      'projects.steam.b3': 'Idempotent payment handling, SQLAlchemy persistence, Docker + nginx deploy',
       'projects.trading.desc':
         'Educational crypto trading bot in Python — modular pipeline from market data to signals, risk rules, and paper execution.',
       'projects.trading.b1': 'Built modular architecture: config → data → strategy → risk → broker → logs',
@@ -146,6 +151,11 @@
       'projects.title': 'Избранные работы',
       'projects.active': 'В разработке',
       'projects.github': 'Смотреть на GitHub',
+      'projects.steam.desc':
+        'Telegram-бот для автоматического пополнения Steam — оплата через Platega.io, webhook, админ-панель и идемпотентная обработка заказов.',
+      'projects.steam.b1': 'Собрал полный цикл: онбординг → оплата → webhook/polling → пополнение через Steam API',
+      'projects.steam.b2': 'Админ-панель в Telegram: заказы, комиссия, лимиты, статистика, рассылки',
+      'projects.steam.b3': 'Идемпотентность платежей, SQLAlchemy, деплой через Docker + nginx',
       'projects.trading.desc':
         'Учебный crypto trading bot на Python — модульный пайплайн от рыночных данных до сигналов, риск-правил и paper-исполнения.',
       'projects.trading.b1': 'Собрал модульную архитектуру: config → data → strategy → risk → broker → logs',

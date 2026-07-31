@@ -845,6 +845,11 @@ code {
   gap: 12px;
 }
 
+.project-preview--steam {
+  background: linear-gradient(145deg, rgba(99, 102, 241, 0.22), rgba(15, 23, 42, 0.35));
+  color: #a5b4fc;
+}
+
 .project-preview--trading {
   background: linear-gradient(145deg, rgba(20, 184, 166, 0.22), rgba(15, 23, 42, 0.35));
   color: #5eead4;
@@ -912,6 +917,61 @@ code {
 }
 
 .preview-lines .ok { color: #4ade80; }
+
+.steam-mock {
+  justify-content: center;
+  gap: 6px;
+}
+
+.steam-mock__bubble {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  line-height: 1.35;
+  padding: 6px 10px;
+  border-radius: 10px;
+  max-width: 92%;
+}
+
+.steam-mock__bubble--user {
+  align-self: flex-end;
+  background: rgba(99, 102, 241, 0.35);
+  color: #e0e7ff;
+  border-bottom-right-radius: 3px;
+}
+
+.steam-mock__bubble--bot {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.07);
+  color: #cbd5e1;
+  border-bottom-left-radius: 3px;
+}
+
+.steam-mock__bubble--ok {
+  color: #86efac;
+  border: 1px solid rgba(74, 222, 128, 0.25);
+}
+
+.steam-mock__status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+}
+
+.steam-mock__status span {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  padding: 3px 8px;
+  color: #94a3b8;
+}
+
+.steam-mock__status .ok {
+  color: #4ade80;
+  border-color: rgba(74, 222, 128, 0.3);
+}
 
 .preview-cards {
   display: grid;
@@ -1273,6 +1333,7 @@ code {
 
 .reveal-delay-1 { transition-delay: 0.12s; }
 .reveal-delay-2 { transition-delay: 0.24s; }
+.reveal-delay-3 { transition-delay: 0.36s; }
 
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateX(-50%) translateY(20px); }
